@@ -1,0 +1,46 @@
+﻿{
+  "name": "CF Analytics Pro",
+  "version": "1.0.0",
+  "description": "Advanced Codeforces profile analytics with charts, weak topic detection, bookmark management, and practice recommendations",
+  "author": {
+    "name": "Sanjib Bayen",
+    "email": "sanjibbayen11@gmail.com",
+    "url": "https://github.com/SanjibBayen",
+    "codeforces": "https://codeforces.com/profile/sanjib29"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/SanjibBayen/cf-analytics-pro",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SanjibBayen/cf-analytics-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SanjibBayen/cf-analytics-pro/issues"
+  },
+  "keywords": [
+    "codeforces",
+    "competitive-programming",
+    "browser-extension",
+    "chrome-extension",
+    "analytics",
+    "chartjs",
+    "typescript",
+    "wxt"
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://codeforces.com/*"
+  ],
+  "browsers": {
+    "chrome": ">=88",
+    "firefox": ">=109",
+    "edge": ">=88"
+  },
+  "privacy": {
+    "data_collection": "none",
+    "external_services": "none",
+    "local_storage": "settings, bookmarks"
+  }
+}

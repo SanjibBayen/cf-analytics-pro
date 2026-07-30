@@ -1,0 +1,27 @@
+{
+    "name":  "cf-analytics-pro",
+    "version":  "1.0.0",
+    "description":  "Professional Codeforces Analytics Extension with advanced insights",
+    "type":  "module",
+    
+    "scripts":  {
+                    "zip":  "wxt zip",
+                    "build":  "wxt build",
+                    "dev":  "wxt"
+                },
+    "dependencies":  {
+                         "@preact/signals-core":  "^1.6.0",
+                         "chart.js":  "^4.4.0",
+                         "idb":  "^8.0.0",
+                         "lit":  "^3.1.0",
+                         "uplot":  "^1.6.30"
+                     },
+    "devDependencies":  {
+                            "@types/chrome":  "^0.0.260",
+                            "prettier":  "^3.2.0",
+                            "terser":  "^5.30.0",
+                            "typescript":  "^5.4.0",
+                            "vitest":  "^4.1.10",
+                            "wxt":  "^0.19.13"
+                        }
+}
