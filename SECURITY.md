@@ -12,6 +12,7 @@ CF Analytics Pro processes all data locally in your browser. No user data is col
 ## Permissions
 
 The extension requires minimal permissions:
+
 - `storage` - For saving user preferences
 - Host permission: `https://codeforces.com/*` - For API access
 

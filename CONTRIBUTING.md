@@ -6,18 +6,24 @@ Thank you for your interest in contributing. This document outlines the process 
 
 1. Fork the repository
 2. Clone your fork:
+
 ```
 git clone https://github.com/YOUR_USERNAME/cf-analytics-pro.git
 cd cf-analytics-pro
 ```
+
 3. Install dependencies:
+
 ```
 npm install
 ```
+
 4. Start development server:
+
 ```
 npm run dev
 ```
+
 5. Load the extension in Chrome from `.output/chrome-mv3`
 
 ## Project Structure

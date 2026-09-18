@@ -27,12 +27,8 @@
     "typescript",
     "wxt"
   ],
-  "permissions": [
-    "storage"
-  ],
-  "host_permissions": [
-    "https://codeforces.com/*"
-  ],
+  "permissions": ["storage"],
+  "host_permissions": ["https://codeforces.com/*"],
   "browsers": {
     "chrome": ">=88",
     "firefox": ">=109",

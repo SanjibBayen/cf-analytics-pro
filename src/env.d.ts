@@ -17,4 +17,3 @@ declare module 'uplot/dist/uPlot.min.css' {
   const content: string;
   export default content;
 }
-

@@ -1,6 +1,6 @@
 # CF Analytics Pro
 
-Advanced Codeforces profile analytics. Beautiful charts, weak topic detection, bookmark management, and practice recommendations — all processed locally in your browser.
+Advanced Codeforces profile analytics. Beautiful charts, weak topic detection, bookmark management, and practice recommendations - all processed locally in your browser.
 
 ## Features
 
@@ -17,6 +17,12 @@ Advanced Codeforces profile analytics. Beautiful charts, weak topic detection, b
 - Smart grouping by attempt count: Stuck (5+), Close (3-4), Fresh (1-2)
 - Bookmark any problem with one click using native Codeforces star icons
 - Bookmarks stored locally, invisible to other users
+
+**Smart Submit**
+- Remembers the last problem you visited
+- Auto-fills the problem code when you land on the submit page
+- Works for problemset, contest, and gym submissions
+- Respects the correct format for each page (full ID like 2264E2 for problemset, letter like E2 for contests)
 
 **Customization**
 - Toggle any section on or off from the extension popup

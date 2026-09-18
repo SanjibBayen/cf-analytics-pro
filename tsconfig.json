@@ -8,7 +8,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "sourceMap": true,
-   
+
     "paths": {
       "@/*": ["./src/*"]
     },

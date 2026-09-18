@@ -5,32 +5,24 @@
  * https://github.com/SanjibBayen/cf-analytics-pro
  */
 
-interface LastProblem {
-  id: string;
-  contestId: number;
-  index: string;
-  type: 'problemset' | 'contest' | 'gym';
-  timestamp: number;
-}
-
-const MAX_AGE_MS = 60 * 60 * 1000;
-
-function readLastProblem(): LastProblem | null {
-  try {
-    const raw = localStorage.getItem('cf_last_problem');
-    if (!raw) return null;
-    const data = JSON.parse(raw) as LastProblem;
-    if (Date.now() - data.timestamp > MAX_AGE_MS) return null;
-    return data;
-  } catch {
-    return null;
-  }
-}
+import type { ProblemSite } from '@/core/types';
+import { getLastProblem } from '@/core/storage';
+import { LAST_PROBLEM_TTL_MS } from '@/core/constants';
 
 interface SubmitContext {
-  kind: 'problemset' | 'contest' | 'gym';
+  kind: ProblemSite;
   contestId?: number;
 }
+
+const TEXT_INPUT_SELECTORS = [
+  'input[name="submittedProblemCode"]',
+  'input[name="submittedProblemIndex"]',
+];
+
+const SELECT_INPUT_SELECTORS = [
+  'select[name="submittedProblemIndex"]',
+  'select[name="submittedProblemCode"]',
+];
 
 function detectSubmitPage(): SubmitContext | null {
   const path = window.location.pathname;
@@ -60,19 +52,9 @@ function markAutoFilled(el: HTMLElement): void {
     el.style.outlineOffset = prevOffset;
     el.style.transition = prevTransition;
   }, 900);
-
-  const parent = el.parentElement;
-  if (parent && !parent.querySelector('.cf-autofill-note')) {
-    const note = document.createElement('span');
-    note.className = 'cf-autofill-note';
-    note.textContent = 'Auto-filled by CF Analytics Pro';
-    note.style.cssText = 'font-size:10px;color:#3f51b5;margin-left:8px;';
-    parent.appendChild(note);
-    setTimeout(() => note.remove(), 2600);
-  }
 }
 
-function fillTextInput(input: HTMLInputElement, value: string): boolean {
+function fillText(input: HTMLInputElement, value: string): boolean {
   if (input.disabled || input.value.trim()) return false;
   input.value = value;
   input.dispatchEvent(new Event('input', { bubbles: true }));
@@ -89,18 +71,8 @@ function fillSelect(select: HTMLSelectElement, value: string): boolean {
   return true;
 }
 
-const TEXT_INPUT_SELECTORS = [
-  'input[name="submittedProblemCode"]',
-  'input[name="submittedProblemIndex"]',
-];
-
-const SELECT_INPUT_SELECTORS = [
-  'select[name="submittedProblemIndex"]',
-  'select[name="submittedProblemCode"]',
-];
-
 export function runSmartSubmit(): void {
-  const last = readLastProblem();
+  const last = getLastProblem(LAST_PROBLEM_TTL_MS);
   if (!last) return;
 
   const submit = detectSubmitPage();
@@ -118,7 +90,7 @@ export function runSmartSubmit(): void {
 
   for (const sel of TEXT_INPUT_SELECTORS) {
     const input = document.querySelector<HTMLInputElement>(sel);
-    if (input && fillTextInput(input, value)) {
+    if (input && fillText(input, value)) {
       markAutoFilled(input);
       console.log('[CF Analytics] Smart Submit filled', sel, 'with', value);
       return;

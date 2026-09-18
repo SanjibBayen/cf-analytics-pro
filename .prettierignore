@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+.output/
+.wxt/
+dist/
+
+# Lock files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Generated
+*.min.js
+*.min.css
+
+# Docs (keep prettier from reformatting)
+LICENSE.md
+README.md
+CHANGELOG.md
+
+# Env and config
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
