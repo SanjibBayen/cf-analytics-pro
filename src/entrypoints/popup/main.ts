@@ -6,8 +6,14 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const defaults: Record<string, boolean> = { ratings: true, tags: true, weak: true, unsolved: true };
-  const ids = ['ratings', 'tags', 'weak', 'unsolved'];
+  const defaults: Record<string, boolean> = {
+    ratings: true,
+    tags: true,
+    weak: true,
+    unsolved: true,
+    smartSubmit: true,
+  };
+  const ids = ['ratings', 'tags', 'weak', 'unsolved', 'smartSubmit'];
 
   chrome.storage.local.get('cf_settings', (result) => {
     const merged = { ...defaults, ...(result.cf_settings || {}) };
@@ -25,7 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     chrome.storage.local.set({ cf_settings: data }, () => {
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        if (tabs[0]?.id && tabs[0]?.url?.includes('codeforces.com/profile')) {
+        if (
+          tabs[0]?.id &&
+          tabs[0]?.url &&
+          /codeforces\.com\/(profile|problemset|contest|gym)/.test(tabs[0].url)
+        ) {
           chrome.tabs.reload(tabs[0].id);
         }
       });
@@ -36,4 +46,3 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('toggle-' + id)?.addEventListener('change', save);
   });
 });
-

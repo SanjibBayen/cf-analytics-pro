@@ -1,51 +1,126 @@
 ﻿<!-- @license SPDX-License-Identifier: Apache-2.0 Copyright 2026 Sanjib Bayen -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CF Analytics Pro</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       width: 240px;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #fff;
       padding: 14px 16px;
     }
-    .header { margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
-    .header h1 { font-size: 13px; font-weight: 700; color: #1a237e; }
-    .header .ver { font-size: 9px; color: #999; }
-    .section { margin-bottom: 10px; }
-    .section-title { font-size: 9px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-    .toggle-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 8px; font-size: 12px; border-radius: 4px; }
-    .toggle-row:hover { background: #f8f9fa; }
-    .toggle-row label { cursor: pointer; color: #333; }
-    .toggle-row input[type="checkbox"] { cursor: pointer; accent-color: #3f51b5; width: 15px; height: 15px; }
-    .footer { margin-top: 12px; padding-top: 10px; border-top: 1px solid #eee; font-size: 10px; color: #888; text-align: center; }
-    .footer a { color: #1a237e; text-decoration: none; font-weight: 600; }
-    .footer a:hover { text-decoration: underline; }
-    .footer .heart { color: #e74c3c; }
+
+    .header {
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header h1 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a237e;
+    }
+
+    .header .ver {
+      font-size: 9px;
+      color: #999;
+    }
+
+    .section {
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 9px;
+      font-weight: 600;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .toggle-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 8px;
+      font-size: 12px;
+      border-radius: 4px;
+    }
+
+    .toggle-row:hover {
+      background: #f8f9fa;
+    }
+
+    .toggle-row label {
+      cursor: pointer;
+      color: #333;
+    }
+
+    .toggle-row input[type="checkbox"] {
+      cursor: pointer;
+      accent-color: #3f51b5;
+      width: 15px;
+      height: 15px;
+    }
+
+    .footer {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+      font-size: 10px;
+      color: #888;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #1a237e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .heart {
+      color: #e74c3c;
+    }
   </style>
 </head>
+
 <body>
   <div class="header">
     <h1>CF Analytics Pro</h1>
-    <!-- <span class="ver">v3.0.0</span> -->
+    <!-- <span class="ver">v1.0.0</span> -->
   </div>
-  
+
   <div class="section">
     <div class="section-title">Display</div>
     <div class="toggle-row"><label>Problem Ratings</label><input type="checkbox" id="toggle-ratings" checked></div>
     <div class="toggle-row"><label>Tags Solved</label><input type="checkbox" id="toggle-tags" checked></div>
     <div class="toggle-row"><label>Weak Topics</label><input type="checkbox" id="toggle-weak" checked></div>
     <div class="toggle-row"><label>Unsolved List</label><input type="checkbox" id="toggle-unsolved" checked></div>
+    <div class="section-title">Helper</div>
+    <div class="toggle-row"><label>Smart Submit</label><input type="checkbox" id="toggle-smartSubmit" checked></div>
   </div>
 
   <div class="footer">
-    crafted with <span class="heart">&hearts;</span> by <a href="https://github.com/SanjibBayen" target="_blank">Sanjib Bayen</a>
+    crafted with <span class="heart">&hearts;</span> by <a href="https://github.com/SanjibBayen" target="_blank">Sanjib
+      Bayen</a>
   </div>
   <script type="module" src="./main.ts"></script>
 </body>
-</html>
 
+</html>

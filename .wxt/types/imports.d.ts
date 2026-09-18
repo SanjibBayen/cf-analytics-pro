@@ -30,6 +30,7 @@ declare global {
   const renderTagsTab: typeof import('D:/A-Local Files/Projects/cf-analytics-pro/src/utils/tags-tab')['renderTagsTab']
   const renderUnsolvedTab: typeof import('D:/A-Local Files/Projects/cf-analytics-pro/src/utils/unsolved-tab')['renderUnsolvedTab']
   const renderWeakTopics: typeof import('D:/A-Local Files/Projects/cf-analytics-pro/src/utils/weak-topics')['renderWeakTopics']
+  const runSmartSubmit: typeof import('D:/A-Local Files/Projects/cf-analytics-pro/src/utils/submit-helper')['runSmartSubmit']
   const storage: typeof import('wxt/storage')['storage']
   const useAppConfig: typeof import('wxt/client')['useAppConfig']
 }

@@ -29,6 +29,7 @@
     "renderTagsTab": true,
     "renderUnsolvedTab": true,
     "renderWeakTopics": true,
+    "runSmartSubmit": true,
     "storage": true,
     "useAppConfig": true
   }
