@@ -1,6 +1,15 @@
+<div align="center">
+
+[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-4285F4?logo=googlechrome&logoColor=white)](#installation)
+[![Firefox Add-ons](https://img.shields.io/badge/Firefox-Add--ons-FF7139?logo=firefox&logoColor=white)](#installation)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE.md)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/SanjibBayen/cf-analytics-pro/releases)
+
+</div>
+
 # CF Analytics Pro
 
-Advanced Codeforces profile analytics. Beautiful charts, weak topic detection, bookmark management, and practice recommendations - all processed locally in your browser.
+Advanced analytics for Codeforces profiles, built for competitive programmers. Interactive charts, weak topic detection, bookmarks, and Smart Submit running fully in your browser with no external servers.
 
 ## Features
 
@@ -28,16 +37,24 @@ Advanced Codeforces profile analytics. Beautiful charts, weak topic detection, b
 - Toggle any section on or off from the extension popup
 - Settings persist across sessions
 
+
 ## Installation
 
-**Manual**
+### Chrome Web Store
+> **Coming soon** — pending review.
+
+### Firefox Add-ons
+> **Coming soon** — pending review.
+
+### Manual Installation
+```
 1. Download the latest release
 2. Open Chrome and navigate to `chrome://extensions`
 3. Enable Developer mode
 4. Click Load unpacked and select the extension folder
 5. Visit any Codeforces profile
-
-**Build from Source**
+```
+### Build from Source
 ```
 git clone https://github.com/SanjibBayen/cf-analytics-pro.git
 cd cf-analytics-pro
@@ -45,9 +62,19 @@ npm install
 npm run build
 ```
 
-## Privacy
+## Contributing
 
-All data processed locally. No tracking, no telemetry, no external servers. Only communicates with the official Codeforces API.
+Contributions are welcome. Please read the [Contributing Guide](CONTRIBUTING.md) before opening a pull request.
+
+## Privacy & Security
+
+All data is processed locally in your browser. No tracking, no telemetry, no external servers.
+
+- **Storage** - Bookmarks and settings stay in your browser only
+- **Network** - Only communicates with the official Codeforces API
+- **Permissions** - Minimal: `storage` and access to `codeforces.com` only
+
+For details, see the full [Security Policy](SECURITY.md).
 
 ## Tech Stack
 
@@ -55,14 +82,22 @@ TypeScript · WXT · Chart.js · Vite
 
 ## License
 
-Apache-2.0 Copyright 2026 Sanjib Bayen
+Licensed under the [Apache License 2.0](LICENSE.md) - Copyright 2026 Sanjib Bayen
+
 
 ## Author
 
-Sanjib Bayen - GitHub: https://github.com/SanjibBayen 
+Sanjib Bayen - [GitHub](https://github.com/SanjibBayen)
+
+
 
 ---
+
+
 <div align="center">
-from one competitive programmer to another<br>
-<b>Sanjib Bayen</b>
+
+*Built by a competitive programmer, for competitive programmers.*
+
+**[Sanjib Bayen](https://codeforces.com/profile/devdaas)**
+
 </div>
