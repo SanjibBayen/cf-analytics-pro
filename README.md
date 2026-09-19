@@ -40,20 +40,18 @@ Advanced analytics for Codeforces profiles, built for competitive programmers. I
 
 ## Installation
 
+### Install from Source
+
+Download the latest release: [cf-analytics-pro-v1.0.0](https://github.com/SanjibBayen/cf-analytics-pro/releases/latest)
+
+Then follow the manual installation steps below.
+
 ### Chrome Web Store
-> **Coming soon** — pending review.
+> **Coming soon** - pending review.
 
 ### Firefox Add-ons
-> **Coming soon** — pending review.
+> **Coming soon** - pending review.
 
-### Manual Installation
-```
-1. Download the latest release
-2. Open Chrome and navigate to `chrome://extensions`
-3. Enable Developer mode
-4. Click Load unpacked and select the extension folder
-5. Visit any Codeforces profile
-```
 ### Build from Source
 ```
 git clone https://github.com/SanjibBayen/cf-analytics-pro.git
